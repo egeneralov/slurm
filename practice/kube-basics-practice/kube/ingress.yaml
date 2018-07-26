@@ -4,7 +4,7 @@ metadata:
   name: fileshare
 spec:
   rules:
-  - host: my.host.foo
+  - host: student01.k8s.slurm.io
     http:
       paths:
       - backend:
