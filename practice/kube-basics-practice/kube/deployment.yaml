@@ -17,6 +17,13 @@ spec:
       labels:
         app: fileshare
     spec:
+      initContainers:
+        - image: busybox
+          name: mount-permissions-fix
+          command: ["sh", "-c", "chmod 777 /data"]
+          volumeMounts:
+            - name: data
+              mountPath: /data
       containers:
         - image: centosadmin/reloadable-nginx:1.12
           name: nginx
