@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: fileshare
+spec:
+  rules:
+  - host: my.host.foo
+    http:
+      paths:
+      - backend:
+          serviceName: fileshare
+          servicePort: 80
