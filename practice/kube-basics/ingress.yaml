@@ -4,7 +4,7 @@ metadata:
   name: my-ingress
 spec:
   rules:
-  - host: my.host.foo
+  - host: students01.k8s.slurm.io
     http:
       paths:
       - backend:
